@@ -22,3 +22,4 @@ avg = round(avg,2)
 
 print('total score :',sum)
 print('avg score : ',avg)
+
