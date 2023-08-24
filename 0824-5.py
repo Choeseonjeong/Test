@@ -9,6 +9,7 @@ num = int(input("정수를 입력하시오 : "))
 
 a = 1
 count = 0
+# 밖에서 정의
 
 while a <= num:
     if num % a == 0:
