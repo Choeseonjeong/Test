@@ -1,17 +1,21 @@
-# 첫 번째로 나오는 음수
+# 카운트 업
 
-# 정수 리스트 num_list가 주어질 때,
-# 첫 번째로 나오는 음수의 인덱스를 return하도록 solution 함수를 완성해주세요. 음수가 없다면 -1을 return합니다.
+# 정수 start_num와 end_num가 주어질 때,
+# start_num부터 end_num까지의 숫자를 차례로 담은 리스트를 return하도록 solution 함수를 완성해주세요.
 
 
-def solution(num_list):
-    for i in num_list:
-        if i < 0:
-            return num_list[i]
-        else:
-            return -1
+def solution(start_num, end_num):
+    a = []
+    for i in range(start_num, end_num + 1):
+        a.append(i)
+    return a
+
+
+def solution(start, end):
+    return [i for i in range(start, end + 1)]
 
 
 # main
-num_list = list(input().split(","))
-print(solution(num_list))
+start_num = int(input())
+end_num = int(input())
+print(solution(start_num, end_num))
