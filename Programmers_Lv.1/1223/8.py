@@ -1,6 +1,8 @@
+# 자릿수 더하기
+
+
 def solution(n):
-    answer = 0
-    return answer
+    return sum(map(int, str(n)))
 
 
-print(solution())
+print(solution(123))

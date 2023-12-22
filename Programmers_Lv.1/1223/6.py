@@ -1,6 +1,8 @@
-def solution(n):
-    answer = 0
-    return answer
+# x만큼 간격이 있는 n개의 숫자
 
 
-print(solution())
+def solution(x, n):
+    return [i * x + x for i in range(n)]
+
+
+print(solution(4, 3))

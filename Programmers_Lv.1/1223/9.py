@@ -1,6 +1,10 @@
+# 자연수 뒤집어 배열로 만들기
+
+
 def solution(n):
-    answer = 0
-    return answer
+    a = list(map(int, str(n)))
+    a.reverse()
+    return a
 
 
-print(solution())
+print(solution(12345))

@@ -2,8 +2,7 @@
 
 
 def solution(n):
-    answer = 0
-    return answer
+    return "Odd" if n % 2 != 0 else "Even"
 
 
-print(solution())
+print(solution(3))
