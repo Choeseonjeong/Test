@@ -1,9 +1,9 @@
-# 정수 제곱근 판별
+# 하샤드 수
 
 
-def solution(n):
-    num = n**0.5
-    return (num + 1) ** 2 if num == int(num) else -1
+def solution(x):
+    a = sum(map(int, str(x)))
+    return True if x % a == 0 else False
 
 
-print(solution(3))
+print(solution(12))

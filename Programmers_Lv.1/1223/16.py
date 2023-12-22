@@ -1,9 +1,8 @@
-# 정수 제곱근 판별
+# 서울에서 김서방 찾기
 
 
-def solution(n):
-    num = n**0.5
-    return (num + 1) ** 2 if num == int(num) else -1
+def solution(seoul):
+    return "김서방은 " + str(seoul.index("Kim")) + "에 있다"
 
 
-print(solution(3))
+print(solution(["Jane", "Kim"]))

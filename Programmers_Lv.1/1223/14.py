@@ -1,9 +1,14 @@
-# 정수 제곱근 판별
+# 음양 더하기
 
 
-def solution(n):
-    num = n**0.5
-    return (num + 1) ** 2 if num == int(num) else -1
+def solution(absolutes, signs):
+    a = []
+    for i in range(len(absolutes)):
+        if signs[i] == True:
+            a.append(absolutes[i])
+        else:
+            a.append(-absolutes[i])
+    return sum(a)
 
 
-print(solution(3))
+print(solution([4, 7, 12], [True, False, True]))
