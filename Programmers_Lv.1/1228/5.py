@@ -1,9 +1,9 @@
-# 나머지가 1이 되는 수 찾기
+# 내적
 
 
-def solution(n):
-    a = [i for i in range(1, n) if n % i == 1]
-    return a[0]
+def solution(a, b):
+    for i in range(len(a)):
+        return sum(a[i] * b[i] for i in range(len(a)))
 
 
-print(solution(10))
+print(solution([1, 2, 3, 4], [-3, -1, 0, 2]))

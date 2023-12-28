@@ -1,9 +1,17 @@
-# 나머지가 1이 되는 수 찾기
+# 이상한 문자 만들기
 
 
-def solution(n):
-    a = [i for i in range(1, n) if n % i == 1]
-    return a[0]
+def solution(s):
+    answer = ""
+    new_list = s.split(" ")
+    for i in new_list:
+        for j in range(len(i)):
+            if j % 2 == 0:
+                answer += i[j].upper()
+            else:
+                answer += i[j].lower()
+        answer += " "
+    return answer[0:-1]
 
 
-print(solution(10))
+print(solution("try hello world"))

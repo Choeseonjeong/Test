@@ -1,9 +1,13 @@
-# 나머지가 1이 되는 수 찾기
+# 부족한 금액 계산하기
 
 
-def solution(n):
-    a = [i for i in range(1, n) if n % i == 1]
-    return a[0]
+def solution(price, money, count):
+    result = 0
+    price_result = 0
+    for i in range(count):
+        price_result += price
+        result += price_result
+    return result - money if result > money else 0
 
 
-print(solution(10))
+print(solution(3, 20, 4))

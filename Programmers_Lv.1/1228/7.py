@@ -1,9 +1,14 @@
-# 나머지가 1이 되는 수 찾기
+# 약수의 개수와 덧셈
 
 
-def solution(n):
-    a = [i for i in range(1, n) if n % i == 1]
-    return a[0]
+def solution(left, right):
+    answer = 0
+    for i in range(left, right + 1):
+        if int(i**0.5) == i**0.5:
+            answer -= i
+        else:
+            answer += i
+    return answer
 
 
-print(solution(10))
+print(solution(13, 17))

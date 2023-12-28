@@ -1,9 +1,14 @@
-# 나머지가 1이 되는 수 찾기
+# 문자열 다루기 기본
 
 
-def solution(n):
-    a = [i for i in range(1, n) if n % i == 1]
-    return a[0]
+def solution(s):
+    if len(s) == 4 or len(s) == 6:
+        if s.isdigit() == True:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
-print(solution(10))
+print(solution("a234"))

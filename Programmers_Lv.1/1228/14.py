@@ -1,9 +1,12 @@
-# 나머지가 1이 되는 수 찾기
+# 같은 숫자는 싫어
 
 
-def solution(n):
-    a = [i for i in range(1, n) if n % i == 1]
-    return a[0]
+def solution(arr):
+    a = [arr[0]]
+    for i in range(1, len(arr)):
+        if arr[i] != arr[i - 1]:
+            a.append(arr[i])
+    return a
 
 
-print(solution(10))
+print(solution([4, 4, 3]))
