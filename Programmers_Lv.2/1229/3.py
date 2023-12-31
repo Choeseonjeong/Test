@@ -5,12 +5,22 @@
 
 
 def solution(s):
-    count = 0
-    count_zero = 0
-    while len(list(s)) == 1:
-        count += 1
-        s = "1"
-    return count
+    answer = []
+    cnt = 0
+    zeroCnt = 0
+
+    while True:
+        if s == "1":
+            break
+
+        zeroCnt += s.count("0")
+        s = s.replace("0", "")
+        s = bin(len(s))[2:]
+
+        cnt += 1
+
+    answer = [cnt, zeroCnt]
+    return answer
 
 
 print(solution("110010101001"))
